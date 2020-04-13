@@ -1,6 +1,6 @@
 #!/bin/python3
 
-import pygame
+import pygame, configparser
 
 from game.cenarios.GreenHillZone import GreenHillZone
 from game.cenarios.MarbleZone import MarbleZone
@@ -9,7 +9,11 @@ from game.telas.TelaDeInicio import TelaDeInicio
 pygame.mixer.pre_init(44100, 16, 2, 1024)
 pygame.init()
 
-tela = pygame.display.set_mode([1000,490])
+config = configparser.ConfigParser()
+config.read("config.ini")
+JANELA = [int(config['JANELA']['LARGURA']), int(config['JANELA']['ALTURA'])]
+
+tela = pygame.display.set_mode(JANELA)
 pygame.display.set_caption("Sonic Pygame")
 clock = pygame.time.Clock()
 
