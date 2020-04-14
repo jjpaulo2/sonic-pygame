@@ -1,6 +1,6 @@
 #!/bin/python3
 
-import pygame, configparser
+import pygame, configparser, pathlib
 
 from game.cenarios.GreenHillZone import GreenHillZone
 from game.cenarios.MarbleZone import MarbleZone
@@ -17,28 +17,26 @@ tela = pygame.display.set_mode(JANELA)
 pygame.display.set_caption("Sonic Pygame")
 clock = pygame.time.Clock()
 
-inicio = TelaDeInicio(tela)
-inicio.rodar_cenario()
+#inicio = TelaDeInicio(tela)
+#inicio.rodar_cenario()
 
 fase1 = GreenHillZone(tela)
-fase2 = MarbleZone(tela)
+fase1.rodar_cenario()
+fase = 1
+#fase2 = MarbleZone(tela)
 
 executando = True
 while executando:
     for evento in pygame.event.get():
-        if evento.type == pygame.KEYDOWN:
-            if evento.key == pygame.K_1:
-                fase1.rodar_cenario()
-            if evento.key == pygame.K_2:
-                fase2.rodar_cenario()
-            if evento.key == pygame.K_ESCAPE:
-                pygame.mixer.music.fadeout(500)
-                inicio.rodar_cenario()
+
+        if fase == 1: 
+            fase1.atualizar_cenario(evento)
 
         if evento.type == pygame.QUIT:
             executando = False
 
     clock.tick(30)
     pygame.display.update()
+    pygame.display.flip()
 
 pygame.quit()

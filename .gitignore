@@ -1,2 +1,4 @@
 /lib
 /bin
+/.vscode
+__pycache__

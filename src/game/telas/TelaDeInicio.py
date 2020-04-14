@@ -18,3 +18,7 @@ class TelaDeInicio:
     def rodar_cenario(self):
         self.renderizar_fundo()
         self.tocar_musica()
+    
+    def remover_cenario(self):
+        self.tela.fill 
+        self.tela.set_alpha(255)
