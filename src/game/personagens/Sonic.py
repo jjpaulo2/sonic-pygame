@@ -30,9 +30,11 @@ class SonicSprite(Sprite):
 
     def update(self):
         self.rect.move_ip(self.velocidade_x, self.velocidade_y)
+        print("velocidade_x = %d"%self.velocidade_x)
 
         self.image = self.images[self.index]
         self.index += 1
+        
         if self.velocidade_x > 0:
             if self.index >= 4:
                 self.index = 0
@@ -43,7 +45,7 @@ class SonicSprite(Sprite):
     def stop(self):
         if self.velocidade_x > 0: 
             self.index = -1
-        else: 
+        elif self.velocidade_x < 0 : 
             self.index = 3
 
         self.velocidade_x = 0
