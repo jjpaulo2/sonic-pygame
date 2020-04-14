@@ -15,6 +15,7 @@ JANELA = [int(config['JANELA']['LARGURA']), int(config['JANELA']['ALTURA'])]
 
 tela = pygame.display.set_mode(JANELA)
 pygame.display.set_caption("Sonic Pygame")
+pygame.key.set_repeat(10,10)
 clock = pygame.time.Clock()
 
 inicio = TelaDeInicio(tela)
