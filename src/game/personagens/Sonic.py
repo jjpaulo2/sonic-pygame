@@ -23,7 +23,6 @@ class SonicSprite(Sprite):
         self.images.append(carregar_imagem("sonic-correndo-direita-1.png"))
         self.images.append(carregar_imagem("sonic-correndo-direita-2.png"))
 
-
         self.index = 4
         self.image = self.images[self.index]
         self.rect = pygame.Rect(100,350,100,107)

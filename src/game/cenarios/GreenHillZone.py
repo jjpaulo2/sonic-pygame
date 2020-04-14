@@ -32,16 +32,12 @@ class GreenHillZone:
                 self.sonic.velocidade_x = 10
             if evento.key == pygame.K_LEFT:
                 self.sonic.velocidade_x = -10
-
         if evento.type == pygame.KEYUP:
-            if evento.key in [pygame.K_RIGHT, pygame.K_LEFT]:
-                print("aq")
                 self.sonic.stop()
 
         if self.sonic.rect[0] > self.tela.get_rect()[2] :
             pygame.mixer.music.fadeout(500)
             self.rodando = False
-
 
         self.renderizar_fundo()
         self.grupo_sprites.update()
