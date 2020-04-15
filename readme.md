@@ -4,13 +4,24 @@ This is a simple example what Pygame can do. To see more, get the official pygam
 
 ## Dependencies
 
+Please, verify that you have **virtualenv** and **pipenv** installed.
+
 - Python (3.8)
 - Pygame (1.9.6)
 
 ## Running
 
+    $ git clone https://github.com/jjpaulo2/sonic-pygame.git
+    $ cd sonic-pygame
+
+If you have **virtualenv** and **pipenv** installed, you can do:
+    
     $ pipenv install
     $ pipenv run sonic
+
+However, if don't have it, you can get only:
+
+    $ python3 src/main.py
 
 ## Screenshots
 
