@@ -7,6 +7,11 @@ This is a simple example what Pygame can do. To see more, get the official pygam
 - Python (3.8)
 - Pygame (1.9.6)
 
+## Running
+
+    $ pipenv install
+    $ pipenv run sonic
+
 ## Screenshots
 
 ![Title screen](screenshots/start_screen.png)
@@ -15,10 +20,6 @@ This is a simple example what Pygame can do. To see more, get the official pygam
 
 ![Marble Zone](screenshots/marble_zone.png)
 
-## Running
-
-    $ pipenv install
-    $ pipenv run sonic
 
 ---
 
