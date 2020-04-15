@@ -10,7 +10,7 @@ pygame.mixer.pre_init(44100, 16, 2, 1024)
 pygame.init()
 
 config = configparser.ConfigParser()
-config.read("config.ini")
+config.read("src/config.ini")
 JANELA = [int(config['JANELA']['LARGURA']), int(config['JANELA']['ALTURA'])]
 
 tela = pygame.display.set_mode(JANELA)
