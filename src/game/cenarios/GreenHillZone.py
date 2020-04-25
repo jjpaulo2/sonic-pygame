@@ -22,11 +22,11 @@ class GreenHillZone:
 
     def rodar_cenario(self):
         self.renderizar_fundo()
-        self.tocar_musica()
+        #self.tocar_musica()
 
         self.rodando = True
         
-    def atualizar_cenario(self, evento):
+    def atualizar_eventos(self, evento):
         if evento.type == pygame.KEYDOWN:
             if evento.key == pygame.K_RIGHT:
                 self.sonic.velocidade_x = 10
@@ -34,7 +34,8 @@ class GreenHillZone:
                 self.sonic.velocidade_x = -10
         if evento.type == pygame.KEYUP:
                 self.sonic.stop()
-
+                
+    def atualizar_cenario(self):
         if self.sonic.rect[0] > self.tela.get_rect()[2] :
             pygame.mixer.music.fadeout(500)
             self.rodando = False

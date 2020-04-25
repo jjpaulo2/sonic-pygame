@@ -6,12 +6,14 @@ def carregar_imagem(nome):
 
 class SonicSprite(Sprite):
 
-    def __init__(self):
+    def __init__(self, x=100, y=350):
 
         super(SonicSprite, self).__init__()
 
         self.velocidade_x = 0
         self.velocidade_y = 0
+        self.x = x
+        self.y = y
 
         self.images = []
         self.images.append(carregar_imagem("sonic-correndo-esquerda-3.png"))
@@ -25,7 +27,7 @@ class SonicSprite(Sprite):
 
         self.index = 4
         self.image = self.images[self.index]
-        self.rect = pygame.Rect(100,350,100,107)
+        self.rect = pygame.Rect(self.x, self.y , 100, 107)
 
     def update(self):
         self.rect.move_ip(self.velocidade_x, self.velocidade_y)

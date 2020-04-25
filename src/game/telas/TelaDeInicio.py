@@ -25,13 +25,13 @@ class TelaDeInicio:
 
     def rodar_cenario(self):
         self.renderizar_fundo()
-        self.tocar_musica()
+        #self.tocar_musica()
         self.rodando = True
     
         self.renderizar_press_start()
         pygame.time.set_timer(self.EVENTO_PISCAR, 500)
 
-    def atualizar_cenario(self, evento, fase):
+    def atualizar_eventos(self, evento, fase):
         if evento.type == self.EVENTO_PISCAR:
             if self.press_start_aparecendo:
                 self.renderizar_fundo()
@@ -45,3 +45,6 @@ class TelaDeInicio:
                 pygame.mixer.music.fadeout(500)
                 pygame.time.set_timer(self.EVENTO_PISCAR, 0)
                 self.rodando = False
+    
+    def atualizar_cenario(self):
+        pass

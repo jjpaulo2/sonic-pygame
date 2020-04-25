@@ -9,7 +9,7 @@ class MarbleZone:
         self.musica_path = str(pathlib.Path(__file__).parent.absolute()) + "/../../audio/marble-zone.wav"
         self.tela = tela
 
-        self.sonic = SonicSprite()
+        self.sonic = SonicSprite(x=0)
         self.grupo_sprites = pygame.sprite.Group(self.sonic)
 
     def tocar_musica(self):
@@ -22,11 +22,11 @@ class MarbleZone:
 
     def rodar_cenario(self):
         self.renderizar_fundo()
-        self.tocar_musica()
+        #self.tocar_musica()
 
         self.rodando = True        
         
-    def atualizar_cenario(self, evento):
+    def atualizar_eventos(self, evento):
         if evento.type == pygame.KEYDOWN:
             if evento.key == pygame.K_RIGHT:
                 self.sonic.velocidade_x = 10
@@ -35,6 +35,7 @@ class MarbleZone:
         if evento.type == pygame.KEYUP:
             self.sonic.stop()
 
+    def atualizar_cenario(self):
         self.renderizar_fundo()
         self.grupo_sprites.update()
         self.grupo_sprites.draw(self.tela)
