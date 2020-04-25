@@ -1,6 +1,6 @@
 [[source]]
-name = "sonic-pygame"
-url = "https://github.com/jjpaulo2/sonic-pygame"
+name = "pypi"
+url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
