@@ -4,9 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pylint = "*"
+autopep8 = "*"
+jedi = "*"
 
 [packages]
-pygame = "==1.9.6"
+pygame = "*"
 
 [requires]
 python_version = "3.8"
