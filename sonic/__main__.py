@@ -2,15 +2,15 @@
 
 import pygame, configparser, pathlib
 
-from game.cenarios.GreenHillZone import GreenHillZone
-from game.cenarios.MarbleZone import MarbleZone
-from game.telas.TelaDeInicio import TelaDeInicio
+from .game.cenarios.GreenHillZone import GreenHillZone
+from .game.cenarios.MarbleZone import MarbleZone
+from .game.telas.TelaDeInicio import TelaDeInicio
 
 pygame.mixer.pre_init(44100, 16, 2, 1024)
 pygame.init()
 
 config = configparser.ConfigParser()
-config.read("src/config.ini")
+config.read("sonic/config.ini")
 JANELA = [int(config['JANELA']['LARGURA']), int(config['JANELA']['ALTURA'])]
 
 tela = pygame.display.set_mode(JANELA)

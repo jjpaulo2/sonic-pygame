@@ -13,6 +13,7 @@ class TelaDeInicio:
 
     def tocar_musica(self):
         pygame.mixer.music.load(self.musica_path)
+        pygame.mixer.music.set_volume(0.5)
         pygame.mixer.music.play()
 
     def renderizar_fundo(self):
@@ -25,7 +26,7 @@ class TelaDeInicio:
 
     def rodar_cenario(self):
         self.renderizar_fundo()
-        #self.tocar_musica()
+        self.tocar_musica()
         self.rodando = True
     
         self.renderizar_press_start()
