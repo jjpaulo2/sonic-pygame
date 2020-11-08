@@ -15,4 +15,4 @@ pygame = "*"
 python_version = "3.8"
 
 [scripts]
-sonic = "python3 src/main.py"
+sonic = "python3 -m sonic"
