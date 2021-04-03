@@ -1,31 +1,31 @@
 # Sonic made with [PyGame](https://www.pygame.org)
 
-This is a simple example what Pygame can do. To see more, get the official pygame news [here](https://www.pygame.org).
+This is a simple example what [PyGame](https://www.pygame.org) can do. To see more, get the official [PyGame](https://www.pygame.org) news [here](https://www.pygame.org).
 
 ### Dependencies
 
-Please, verify that you have **virtualenv** and **pipenv** installed.
+Please, verify that you have **Virtualenv** and **PyPIPenv** installed.
 
-- Python (3.8)
-- Pygame (1.9.6)
+- [Python](https://www.python.org) (3.8)
+- [PyGame](https://www.pygame.org) (1.9.6)
 
 ### Running
 
     $ git clone https://github.com/jjpaulo2/sonic-pygame.git
     $ cd sonic-pygame
 
-If you have **virtualenv** and **pipenv** installed, you can do:
+If you have **virtualenv** and **pipenv** installed, you can type:
     
     $ pipenv install
     $ pipenv run sonic
 
-However, if don't have it, you can get only:
+However, if don't have it, you can type only:
 
     $ python3 src/main.py
 
 ### Screenshots
 
-![Title screen](screenshots/start_screen.png)
+![Title Screen](screenshots/start_screen.png)
 
 ![Green Hill Zone](screenshots/green_hill_zone.png)
 
@@ -34,4 +34,4 @@ However, if don't have it, you can get only:
 
 ---
 
-#### Made with :hearts: by [@jjpaulo2](https://github.com/jjpaulo2)
+#### Made by [@yoyomonem/Youssef Abdel Monem Elsayed Ahmed Nasr](https://github.com/yoyomonem)
