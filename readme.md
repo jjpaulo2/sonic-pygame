@@ -14,12 +14,12 @@ Please, verify that you have **Virtualenv** and **PyPIPenv** installed.
     $ git clone https://github.com/jjpaulo2/sonic-pygame.git
     $ cd sonic-pygame
 
-If you have **virtualenv** and **pipenv** installed, you can type:
+If you have **Virtualenv** and **PyPIPenv** installed, you can type:
     
     $ pipenv install
     $ pipenv run sonic
 
-However, if don't have it, you can type only:
+However, if you don't have **Virtualenv** and **PyPIPenv** installed, you can type only:
 
     $ python3 src/main.py
 
@@ -34,4 +34,4 @@ However, if don't have it, you can type only:
 
 ---
 
-#### Made by [@yoyomonem/Youssef Abdel Monem Elsayed Ahmed Nasr](https://github.com/yoyomonem)
+#### Cloned with GitHub Desktop for Windows 10 by [@yoyomonem/Youssef Abdel Monem Elsayed Ahmed Nasr](https://github.com/yoyomonem)
