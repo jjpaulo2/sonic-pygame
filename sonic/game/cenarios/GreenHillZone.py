@@ -14,7 +14,7 @@ class GreenHillZone:
 
     def tocar_musica(self):
         pygame.mixer.music.load(self.musica_path)
-        pygame.mixer.music.set_volume(0.5)
+        pygame.mixer.music.set_volume(0.9)
         pygame.mixer.music.play()
 
     def renderizar_fundo(self):
