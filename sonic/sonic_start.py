@@ -63,12 +63,28 @@ while executando:
             fase_object[fase].atualizar_eventos(evento)
             fase_object[fase].sonic.update()
 
-        if not fase_object[fase].rodando: 
+        if  fase_object[fase].rodando == 1: 
             fase += 1
+            if not fase == 0:
+                fase_object[fase].sonic.rect[0]=30;
             fase_object[fase].rodar_cenario()
+            
+        if  fase_object[fase].rodando == 2: 
+            fase -= 1
+            if not fase == 0:
+                fase_object[fase].sonic.rect[0]=770;
+            fase_object[fase].rodar_cenario() 
+            
+        if  fase_object[fase].rodando == 3: 
+            executando = False
 
         if evento.type == pygame.QUIT:
             executando = False
+            # for i in range(0,1000):
+                # PythonGUI.one_line_progress_meter('Sonic the Hedgehog Demo', i+1, 1000, 'key','Please wait...')
+            for i in range(0,1000):
+                PythonGUI.one_line_progress_meter('Sonic the Hedgehog Demo', i+1, 1000, 'key','Demo closing...')
+            
 
     clock.tick(30)
     pygame.display.flip()
@@ -87,8 +103,5 @@ pygame.quit()
 
 # text_input = values[0]
 
-for i in range(0,1000):
-    PythonGUI.one_line_progress_meter('Sonic the Hedgehog Demo', i+1, 1000, 'key','Please wait...')
-for i in range(0,1000):
-    PythonGUI.one_line_progress_meter('Sonic the Hedgehog Demo', i+1, 1000, 'key','Demo closing...')
+
 PythonGUI.popup('Goodbye!')

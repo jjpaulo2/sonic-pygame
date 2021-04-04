@@ -9,10 +9,13 @@ class MarbleZone:
         self.musica_path = str(pathlib.Path(__file__).parent.absolute()) + "/../../audio/marble-zone.wav"
         self.tela = tela
 
-        self.sonic = SonicSprite(x=0)
+        self.sonic = SonicSprite(x=20)
         self.grupo_sprites = pygame.sprite.Group(self.sonic)
 
     def tocar_musica(self):
+        pygame.mixer.quit()
+        pygame.mixer.pre_init(44100, 16, 2, 1024)
+        pygame.init()
         pygame.mixer.music.load(self.musica_path)
         pygame.mixer.music.set_volume(0.9)
         pygame.mixer.music.play()
@@ -22,10 +25,13 @@ class MarbleZone:
         self.tela.blit(fundo, [0,0])
 
     def rodar_cenario(self):
+        self.rodando = 0
         self.renderizar_fundo()
         self.tocar_musica()
+        
+        self.rodando = 0
 
-        self.rodando = True        
+                
         
     def atualizar_eventos(self, evento):
         if evento.type == pygame.KEYDOWN:
@@ -37,9 +43,16 @@ class MarbleZone:
             self.sonic.stop()
 
     def atualizar_cenario(self):
-        if self.sonic.rect[0] > self.tela.get_rect()[2] :
+        # print(self.sonic.rect[0]) 
+        # print(self.tela.get_rect()[2])
+        # print(self.tela.get_rect()[1])
+        if self.sonic.rect[0] >= self.tela.get_rect()[2] :
             pygame.mixer.music.fadeout(500)
-            self.rodando = False
+            self.rodando = 1
+            
+        if self.sonic.rect[0] <= self.tela.get_rect()[1] :
+            pygame.mixer.music.fadeout(500)
+            self.rodando = 2    
 
         self.renderizar_fundo()
         self.grupo_sprites.update()

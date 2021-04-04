@@ -9,7 +9,7 @@ class DoomsdayZone:
         self.musica_path = str(pathlib.Path(__file__).parent.absolute()) + "/../../audio/the-doomsday-zone.wav"
         self.tela = tela
 
-        self.sonic = SonicSprite(x=0, super_sonic=1)
+        self.sonic = SonicSprite(x=20, super_sonic=1)
         self.grupo_sprites = pygame.sprite.Group(self.sonic)
 
     def tocar_musica(self):
@@ -25,10 +25,11 @@ class DoomsdayZone:
         self.tela.blit(fundo, [0,0])
 
     def rodar_cenario(self):
+        self.rodando = 0
         self.renderizar_fundo()
         self.tocar_musica()
 
-        self.rodando = True
+        self.rodando = 0
         
     def atualizar_eventos(self, evento):
         if evento.type == pygame.KEYDOWN:
@@ -40,9 +41,13 @@ class DoomsdayZone:
                 self.sonic.stop()
                 
     def atualizar_cenario(self):
-        # if self.sonic.rect[0] > self.tela.get_rect()[2] :
-            # pygame.mixer.music.fadeout(500)
-            # self.rodando = False
+        if self.sonic.rect[0] >= self.tela.get_rect()[2] :
+            pygame.mixer.music.fadeout(500)
+            self.rodando = 3
+            
+        if self.sonic.rect[0] < self.tela.get_rect()[1] :
+            pygame.mixer.music.fadeout(500)
+            self.rodando = 2
 
         self.renderizar_fundo()
         self.grupo_sprites.update()

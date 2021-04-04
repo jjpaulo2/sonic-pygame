@@ -50,7 +50,8 @@ class SonicSprite(Sprite):
 
     def update(self):
         self.rect.move_ip(self.velocidade_x, self.velocidade_y)
-        #print("velocidade_x = %d"%self.velocidade_x)
+        # print("velocidade_x = %d"%self.velocidade_x)
+        # print("location = %d"%self.rect[0])
 
         if self.velocidade_x > 0:
             self.index += 1
