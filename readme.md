@@ -8,10 +8,11 @@ Please, verify that you have **Virtualenv** and **PyPIPenv** installed.
 
 - [Python](https://www.python.org) (3.8)
 - [PyGame](https://www.pygame.org) (1.9.6)
+- PySimpleGUI
 
 ### Running
 
-    $ git clone https://github.com/jjpaulo2/sonic-pygame.git
+    $ git clone https://github.com/yoyomonem/sonic-pygame.git
     $ cd sonic-pygame
 
 If you have **Virtualenv** and **PyPIPenv** installed, you can type:
@@ -21,7 +22,7 @@ If you have **Virtualenv** and **PyPIPenv** installed, you can type:
 
 However, if you don't have **Virtualenv** and **PyPIPenv** installed, you can type only:
 
-    $ python3 src/main.py
+    $ python3 sonic/sonic_start.py
 
 ### Screenshots
 
