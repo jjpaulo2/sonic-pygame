@@ -4,7 +4,7 @@ This is a simple example what [PyGame](https://www.pygame.org) can do. To see mo
 
 ### Dependencies
 
-Please, verify that you have **Virtualenv** and **PyPIPenv** installed.
+Please, verify that you have **Virtualenv** and **PyPIenv** installed.
 
 - [Python](https://www.python.org) (3.8)
 - [PyGame](https://www.pygame.org) (1.9.6)
@@ -15,12 +15,12 @@ Please, verify that you have **Virtualenv** and **PyPIPenv** installed.
     $ git clone https://github.com/yoyomonem/sonic-pygame.git
     $ cd sonic-pygame
 
-If you have **Virtualenv** and **PyPIPenv** installed, you can type:
+If you have **Virtualenv** and **PyPIenv** installed, you can type:
     
     $ pipenv install
     $ pipenv run sonic
 
-However, if you don't have **Virtualenv** and **PyPIPenv** installed, you can type only:
+However, if you don't have **Virtualenv** and **PyPIenv** installed, you can type only:
 
     $ python3 sonic/sonic_start.py
 
