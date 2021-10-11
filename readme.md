@@ -35,4 +35,4 @@ However, if you don't have **Virtualenv** and **PyPIenv** installed, you can typ
 
 ---
 
-#### Cloned with GitHub Desktop for Windows 10 by [@yoyomonem/Youssef Abdel Monem Elsayed Ahmed Nasr](https://github.com/yoyomonem)
+#### Cloned with Git by [@yoyomonem/Youssef Abdel Monem Elsayed Ahmed Nasr](https://github.com/yoyomonem)
