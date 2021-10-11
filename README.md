@@ -35,4 +35,4 @@ However, if you don't have **Virtualenv** and **PyPIenv** installed, you can typ
 
 ---
 
-#### Cloned with Git by [@yoyomonem/Youssef Abdel Monem Elsayed Ahmed Nasr](https://github.com/yoyomonem)
+#### Cloned with Git by [@yoyomonem](https://github.com/yoyomonem)
